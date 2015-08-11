@@ -90,14 +90,14 @@ namespace communicate
             sendData(convertToGcodeJSON(data));
         }
         
-        public static void WriteReg(data)
+        public static void WriteReg(int regNumber,int status)
         {
-            sendData(convertToWriteRegJSON(data));
+            sendData(convertToWriteRegJSON(Convert.toString(regNumber) + Convert.toString(status)));
         }
         
-        public static string ReadReg(int num)
+        public static string ReadReg(int regNumber)
         {
-            sendData(convertToReadRegJSON(convert.toString(num)));
+            sendData(convertToReadRegJSON(Convert.toString(regNumber)));
             return recvData();
         }
         
