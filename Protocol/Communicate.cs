@@ -40,7 +40,7 @@ namespace communicate
                 MessageBox.Show("发送失败！\n" + ex.Data); 
             }
         }
-        
+            
         public static string recvData()
         {
             int recv;
