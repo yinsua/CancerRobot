@@ -46,7 +46,7 @@ namespace communicate
                 sp.DataBits = int.Parse(strDataBits);
                 sp.StopBits = (StopBits)int.Parse(strStopBits);
                 sp.ReadTimeout = 1000;
-                sp.SendTimeout = 1000;
+                sp.WriteTimeout = 1000;
                       
                 //打开串口
                 sp.Open();                 
